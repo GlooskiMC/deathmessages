@@ -81,9 +81,9 @@ on load:
 	add "{@prefix} &c<victim> &7rotted away." to {data::deathmessages::wither::*}
 	add "{@prefix} &c<victim> &7decayed." to {data::deathmessages::wither::*}
 # Void Death Messages
-	add "{@prefix2} &c<victim> &7was crushed by the void" to {data::deathmessages::void::*}
-	add "{@prefix2} &c<victim> &7sliped into the void" to {data::deathmessages::void::*}
-	add "{@prefix2} &c<victim> &7fell out of the world" to {data::deathmessages::void::*}
+	add "{@prefix} &c<victim> &7was crushed by the void" to {data::deathmessages::void::*}
+	add "{@prefix} &c<victim> &7sliped into the void" to {data::deathmessages::void::*}
+	add "{@prefix} &c<victim> &7fell out of the world" to {data::deathmessages::void::*}
 # Other Death Messages
 	add "{@prefix} &c<victim> &7was killed." to {data::deathmessages::other::*}
 	add "{@prefix} &c<victim> &7died." to {data::deathmessages::other::*}
