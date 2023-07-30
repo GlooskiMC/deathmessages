@@ -12,7 +12,7 @@
 # ╚═════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝  ╚═╝░░░░░╚═╝╚══════╝╚═════╝░╚═════╝░╚═╝░░╚═╝░╚═════╝░╚══════╝╚═════╝░
 
 # Created by: Jelloski & Gloozzy
-# Version: 1.1
+# Version: 1.2
 
 options:
 
@@ -91,7 +91,7 @@ on load:
 # Do not edit below unless you know what you're doing.
 
 on death of player:
-	if attacker is a player: # Death by Player
+	if attacker is a player or mob: # Death by Player or Mob
 		set {_msg} to a random element out of {data::deathmessages::player::*}
 		replace all "<victim>" with "%victim%" in {_msg}
 		replace all "<attacker>" with "%attacker%" in {_msg}
@@ -101,39 +101,39 @@ on death of player:
 			set {_msg} to a random element out of {data::deathmessages::drowning::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by starvation: # Death by Starvation
+		else if damage was caused by starvation: # Death by Starvation
 			set {_msg} to a random element out of {data::deathmessages::starvation::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by fall: # Death by Fall Damage
+		else if damage was caused by fall: # Death by Fall Damage
 			set {_msg} to a random element out of {data::deathmessages::fall::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by lava: # Death by Lava
+		else if damage was caused by lava: # Death by Lava
 			set {_msg} to a random element out of {data::deathmessages::lava::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by burning: # Death by Burning
+		else if damage was caused by burning: # Death by Burning
 			set {_msg} to a random element out of {data::deathmessages::burning::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by block explosion: # Death by Explosion (Mainly TNT)
+		else if damage was caused by block explosion: # Death by Explosion (Mainly TNT)
 			set {_msg} to a random element out of {data::deathmessages::explosion::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by suffocation: # Death by Suffocation
+		else if damage was caused by suffocation: # Death by Suffocation
 			set {_msg} to a random element out of {data::deathmessages::suffocation::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by wither: # Death by Withering
+		else if damage was caused by wither: # Death by Withering
 			set {_msg} to a random element out of {data::deathmessages::wither::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by poison: # Death by Poison
+		else if damage was caused by poison: # Death by Poison
 			set {_msg} to a random element out of {data::deathmessages::poison::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
-		if damage was caused by void: # Death by Void
+		else if damage was caused by void: # Death by Void
 			set {_msg} to a random element out of {data::deathmessages::void::*}
 			replace all "<victim>" with "%victim%" in {_msg}
 			set death message to "%{_msg}%"
